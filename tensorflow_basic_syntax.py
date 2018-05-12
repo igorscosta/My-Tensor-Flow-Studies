@@ -37,3 +37,15 @@ for operation in my_ops:
     with tf.Session() as session:
         print(session.run(operation))
     print('\n')
+
+a = tf.constant([[1,2],[3,4]])
+print(a.get_shape())
+
+b = tf.constant([[10], [100]])
+print(b.get_shape())
+
+result = tf.matmul(a,b)
+
+with tf.Session() as session:
+    print(session.run(result))
+    print(result.eval())
