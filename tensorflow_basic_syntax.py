@@ -49,3 +49,6 @@ result = tf.matmul(a,b)
 with tf.Session() as session:
     print(session.run(result))
     print(result.eval())
+
+
+    
