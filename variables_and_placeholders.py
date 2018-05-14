@@ -6,3 +6,9 @@ print(my_tensor)
 
 my_var = tf.Variable(initial_value=my_tensor)
 print(my_var)
+
+#sess.run(my_var)
+
+init = tf.global_variables_initializer()
+sess.run(init)
+print(sess.run(my_var))
