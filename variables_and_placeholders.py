@@ -12,3 +12,5 @@ print(my_var)
 init = tf.global_variables_initializer()
 sess.run(init)
 print(sess.run(my_var))
+
+ph = tf.placeholder(tf.float32, shape=(None,5))
