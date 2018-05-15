@@ -78,7 +78,11 @@ with tf.Session() as sess:
 
 y_hat = x_data * model_m + model_b
 
-my_data.sample(n=250).plot(kind = 'scatter', x = 'X Data', y = 'Y')
+my_data.sample(n = 250).plot(kind = 'scatter', x = 'X Data', y = 'Y')
 plt.plot(x_data, y_hat, 'r')
 plt.show()
 
+
+ # tf.estimator API
+
+ 
