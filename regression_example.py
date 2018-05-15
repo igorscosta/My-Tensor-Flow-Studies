@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import tensorflow as tf
+from sklearn.model_selection import train_test_split
 
 
 ######### Creating Data #############
@@ -83,6 +84,9 @@ plt.plot(x_data, y_hat, 'r')
 plt.show()
 
 
- # tf.estimator API
+# tf.estimator API
 
- 
+feat_cols = [tf.feature_column.numeric_column('x',shape=[1])]
+feat_cols = [tf.feature_column.numeric_column('x',shape=[1])]
+
+# Train Test Split
