@@ -103,4 +103,6 @@ input_func = tf.estimator.inputs.numpy_input_fn({'x':x_train}, y_train, batch_si
 train_input_func = tf.estimator.inputs.numpy_input_fn({'x':x_train}, y_train, batch_size=8, num_epochs=1000, shuffle=False)
 eval_input_func = tf.estimator.inputs.numpy_input_fn({'x':x_eval}, y_eval, batch_size=8, num_epochs=1000, shuffle=False)
 
-(estimator.train(input_fn = input_func, steps = 1000))
+estimator.train(input_fn = input_func, steps = 1000)
+
+train_metrics = estimator.evaluate(input_fn = train_input_func, steps = 1000)
