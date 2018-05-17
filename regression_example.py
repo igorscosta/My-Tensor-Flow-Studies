@@ -88,5 +88,13 @@ plt.show()
 
 feat_cols = [tf.feature_column.numeric_column('x',shape=[1])]
 estimator = tf.estimator.LinearRegressor(feature_columns=feat_cols)
+print(estimator)
 
 # Train Test Split
+
+x_train, x_eval, y_train, y_eval = train_test_split(x_data, y_true, test_size = 0.3, random_state = 101)
+print(x_train.shape)
+print(x_eval.shape)
+
+
+input_func = tf.estimator.inputs.numpy_input_fn({'x':x_train}, y_train, batch_size=8, num_epochs=None, suffle=True)
