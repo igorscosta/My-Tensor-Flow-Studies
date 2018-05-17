@@ -97,8 +97,10 @@ print(x_train.shape)
 print(x_eval.shape)
 
 
+tf.logging.set_verbosity(tf.logging.INFO)
+
 input_func = tf.estimator.inputs.numpy_input_fn({'x':x_train}, y_train, batch_size=8, num_epochs=None, shuffle=True)
-
 train_input_func = tf.estimator.inputs.numpy_input_fn({'x':x_train}, y_train, batch_size=8, num_epochs=1000, shuffle=False)
-
 eval_input_func = tf.estimator.inputs.numpy_input_fn({'x':x_eval}, y_eval, batch_size=8, num_epochs=1000, shuffle=False)
+
+(estimator.train(input_fn = input_func, steps = 1000))
