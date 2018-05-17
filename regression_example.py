@@ -87,6 +87,6 @@ plt.show()
 # tf.estimator API
 
 feat_cols = [tf.feature_column.numeric_column('x',shape=[1])]
-feat_cols = [tf.feature_column.numeric_column('x',shape=[1])]
+estimator = tf.estimator.LinearRegressor(feature_columns=feat_cols)
 
 # Train Test Split
