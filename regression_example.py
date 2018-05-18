@@ -117,3 +117,4 @@ print(eval_metrics)
 
 
 brand_new_data = np.linspace(0,10,10)
+input_fn_predict = tf.estimator.inputs.numpy_input_fn({'x':brand_new_data})
