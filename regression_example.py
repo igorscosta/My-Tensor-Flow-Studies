@@ -119,6 +119,14 @@ print(eval_metrics)
 brand_new_data = np.linspace(0,10,10)
 input_fn_predict = tf.estimator.inputs.numpy_input_fn({'x':brand_new_data}, shuffle = False)
 
-predictions = list(estimator.predict(input_fn=input_fn_predict))
-print(predictions)
+#predictions = list(estimator.predict(input_fn=input_fn_predict))
+#print(predictions)
 
+predictions = []
+
+for pred in estimator.predict(input_fn=input_fn_predict):
+    predictions.append(pred['predictions'])
+
+my_data.sample(n=250).plot(kind='scatter', x='X Data', y='Y')
+plt.plot(brand_new_data, predictions, 'r')
+plt.show()
