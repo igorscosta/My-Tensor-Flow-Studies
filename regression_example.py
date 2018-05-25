@@ -130,3 +130,4 @@ for pred in estimator.predict(input_fn=input_fn_predict):
 my_data.sample(n=250).plot(kind='scatter', x='X Data', y='Y')
 plt.plot(brand_new_data, predictions, 'r')
 plt.show()
+
