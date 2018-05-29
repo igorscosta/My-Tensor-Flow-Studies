@@ -131,3 +131,5 @@ my_data.sample(n=250).plot(kind='scatter', x='X Data', y='Y')
 plt.plot(brand_new_data, predictions, 'r')
 plt.show()
 
+
+
