@@ -1,0 +1,32 @@
+
+--------------- Meta-architectures-----------------
+
+
+-> Faster R-CNN (Faster Region-based Convolutional Neural Network)
+    - Detection happens in two stages
+    - 1st Region Proposal Network
+    - 
+
+-> R-FCN (Region-based Fully Convolutional Networks)
+    
+
+-> SSD (Single Shot Detector)
+   - Uses a single feed-forward convolutional network to directly predict classes and anchor offsets
+   without requiring a second stage per-proposal classification operation.
+
+
+
+
+------------- Feature Extractors ------------------
+
+-> VGG - 16
+
+-> Resnet-101
+
+-> Inception v2
+
+-> Inception v3
+
+-> Inception Resnet (v2)
+
+-> MobileNet
