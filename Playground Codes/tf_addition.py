@@ -11,3 +11,4 @@ print(a + b) #add 1
 with tf.Session() as sess:
     result = sess.run(a + b)
     print(result)
+
