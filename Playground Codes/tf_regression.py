@@ -81,7 +81,15 @@ x_train, x_eval, y_train, y_eval = train_test_split(x_data, y_true, test_size = 
 print(x_train.shape())
 
 #Setting the estimator inputs. 
+#Creating input functions
 
 #Using Numpy (Also could be used with Pandas)
 input_func = tf.estimator.inputs.numpy_input_fn({'x' : x_train}, y_train, batch_size = 8, num_epochs = None, shuffle = True)
 
+train_input_func = tf.estimator.inputs.numpy_input_fn({'x' : x_train}, y_train, batch_size = 8, num_epochs = 1000, shuffle = False)
+
+eval_input_func = tf.estimator.inputs.numpy_input_fn({'x' : x_eval}, y_eval, batch_size = 8, num_epochs = 1000, shuffle = False)
+
+#training the estimator
+
+estimator.train(input_fn = input_func)
