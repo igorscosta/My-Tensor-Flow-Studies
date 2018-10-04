@@ -83,5 +83,5 @@ print(x_train.shape())
 #Setting the estimator inputs. 
 
 #Using Numpy (Also could be used with Pandas)
-input_func = tf.estimator.inputs.numpy_input_fn()
+input_func = tf.estimator.inputs.numpy_input_fn({'x' : x_train}, y_train, batch_size = 8, num_epochs = None, shuffle = True)
 
