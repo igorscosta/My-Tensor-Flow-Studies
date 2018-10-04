@@ -64,3 +64,24 @@ y_hat = x_data * model_m + model_b
 my_data.sample(250).plot(kind = 'scatter', x = 'X Data', y = 'Y')
 plt.plot(x_data, y_hat, 'r')
 plt.show()
+
+
+########################## Using TensorFlow Estimator API ######################
+
+#Creating the features columns list
+feat_cols = [tf.feature_column.numeric_column('x', shape=[1])]
+
+#Estimator
+estimator = tf.estimator.LinearRegressor(feature_columns = feat_cols)
+
+from sklearn.model_selection import train_test_split
+
+#Setting the train/test split with 70% training and 30% eval.
+x_train, x_eval, y_train, y_eval = train_test_split(x_data, y_true, test_size = 0.3, random_state = 101)
+print(x_train.shape())
+
+#Setting the estimator inputs. 
+
+#Using Numpy (Also could be used with Pandas)
+input_func = tf.estimator.inputs.numpy_input_fn()
+
